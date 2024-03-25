@@ -3,7 +3,7 @@ name: Publish Docker image on release
 on:
   release:
     types: [created]
-  workflow_dispatch: # Support manual triggers.
+  # workflow_dispatch: # Support manual triggers.
 
 jobs:
   build-and-publish:
@@ -24,5 +24,5 @@ jobs:
         with:
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}:test-0
+            ghcr.io/${{ github.repository }}:${{ github.event.release.name }}
             ghcr.io/${{ github.repository }}:latest
