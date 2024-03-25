@@ -1,0 +1,56 @@
+[project]
+description = "Mock SMTP server that logs the emails it receives"
+name = "smtp-logger"
+version = "0.0.1"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Dave Peck", email = "dave@literalgarage.com" }]
+license = { text = "MIT" }
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff", "mypy"]
+build = ["setuptools", "wheel", "build"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+smtp-logger = "smtp_logger:cli"
+
+[tool.mypy]
+exclude = [".venv", "build"]
+ignore_missing_imports = true
+disallow_untyped_defs = false
+show_error_codes = true
+
+[tool.ruff]
+exclude = [".venv", "build"]
+
+[tool.ruff.lint]
+extend-select = [
+  "E", # style errors
+  "D", # pydocstyle
+  "C", # flake8-comprehensions
+  "B", # flake8-bugbear
+]
+extend-ignore = [
+  "D100", # Allow missing docstring in public module
+  "D203", # Instead, use D211 (zero blank lines before class docstring)
+  "D212", # Instead, use D213 (start multi-line summaries on the second line)
+]
+
+[project.urls]
+Homepage = "https://github.com/literalgarage/smtp-logger"
+Changelog = "https://github.com/literalgarage/smtp-logger/releases"
+Issues = "https://github.com/literalgarage/smtp-logger/issues"
+CI = "https://github.com/literalgarage/smtp-logger/actions"

@@ -1,0 +1,36 @@
+name: Test
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.10", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - name: Install dependencies
+        run: |
+          pip install '.[dev]'
+      - name: Check formatting
+        run: |
+          ruff format --check
+      - name: Lint
+        run: |
+          ruff check
+      - name: Check types
+        run: |
+          mypy .
+      - name: Run tests
+        run: |
+          pytest
