@@ -3,13 +3,12 @@ description = "Mock SMTP server that logs the emails it receives"
 name = "smtp-logger"
 version = "0.0.1"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 authors = [{ name = "Dave Peck", email = "dave@literalgarage.com" }]
 license = { text = "MIT" }
 classifiers = [
   "License :: OSI Approved :: MIT License",
   "Programming Language :: Python :: 3 :: Only",
-  "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
