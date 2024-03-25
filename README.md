@@ -19,7 +19,7 @@ There have been a couple cases recently where I wanted to work with an OSS tool 
 
 This is probably how you want to use `smtp-logger`. This way your project does not need to depend on python (even though the docker image does).
 
-The latest version of `smtp-logger` is packaged in a docker image available at `https://ghcr.io/literalgarage/smtp-logger:latest`.
+The latest version of `smtp-logger` is packaged in a docker image available at `ghcr.io/literalgarage/smtp-logger:latest`.
 
 For instance, to create an `smtp` logger service in your `docker-compose.yml`:
 
