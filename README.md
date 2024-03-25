@@ -48,7 +48,7 @@ The default `SMTP_LOGGER_HOST` is `localhost` and the default `SMTP_LOGGER_PORT`
 
 ## Development
 
-This is the simplest SMTP logging implementation that worked for the specific cases I ran into. There are an enormous number of advanced SMTP features it doesn't support. It doesn't support TLS at the moment.
+This is the simplest SMTP logging implementation that worked for the specific cases I ran into. There are an enormous number of basic and advanced SMTP features this server doesn't yet support. Its handling of `content-transfer-encoding`s is weak at the moment. It doesn't support TLS. etc.
 
 To contribute to this library, first checkout the code. Then create a new virtual environment:
 
