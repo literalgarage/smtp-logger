@@ -40,11 +40,17 @@ pip install smtp-logger
 
 ## Usage
 
-This adds an `smtp-logger` binary.
+This provides an `smtp-logger` binary:
 
-It accepts only `--host` and `--port` parameters or corresponding (`SMTP_LOGGER_HOST` and `SMTP_LOGGER_PORT`) environment variables, all of which are optional.
+```
+> smtp-logger --host localhost --port 8025
+```
 
-The default `SMTP_LOGGER_HOST` is `localhost` and the default `SMTP_LOGGER_PORT` is `8025`.
+It accepts only `--host` and `--port` parameters. These are optional.
+
+If not supplied, the `SMTP_LOGGER_HOST` and `SMTP_LOGGER_PORT` environment variables are used. These are also optional.
+
+If configuration is missing then, by default, `SMTP_LOGGER_HOST` is `localhost` and `SMTP_LOGGER_PORT` is `8025`.
 
 ## Development
 
