@@ -11,7 +11,7 @@ Listens to inbound connections from SMTP clients. Supports a very minimal set of
 
 ## Why?
 
-This is useful in development, often as part of a `docker-compose.yml`.
+This is useful in development, typically as part of a `docker-compose.yml`.
 
 There have been a couple cases recently where I wanted to work with an OSS tool that required a configured SMTP server (for instance, to send password reset or login link emails). The tool itself didn't offer an alternative, so creating a simple logging SMTP service seemed like the best way to go.
 
