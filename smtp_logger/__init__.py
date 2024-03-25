@@ -135,7 +135,7 @@ def _parse_args() -> argparse.Namespace:
         "-H",
         "--host",
         help="The host to bind to.",
-        default=os.getenv("SMTP_LOGGER_HOST", "localhost"),
+        default=os.getenv("SMTP_LOGGER_HOST", "0.0.0.0"),
     )
     parser.add_argument(
         "-p",

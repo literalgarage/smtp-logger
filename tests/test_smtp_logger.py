@@ -26,7 +26,8 @@ Test Code
     try:
         with smtplib.SMTP(host, port) as smtp:
             smtp.send_message(msg)
-    except Exception:
+    except Exception as e:
+        print("Failed to send email:", {e})
         return False
     return True
 
