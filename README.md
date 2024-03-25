@@ -15,7 +15,9 @@ This is useful in development, often as part of a `docker-compose.yml`.
 
 There have been a couple cases recently where I wanted to work with an OSS tool that required a configured SMTP server (for instance, to send password reset or login link emails). The tool itself didn't offer an alternative, so creating a simple logging SMTP service seemed like the best way to go.
 
-## Installation via docker
+## Installation and usage via Docker
+
+This is probably how you want to use `smtp-logger`. This way your project does not need to depend on python (even though the docker image does).
 
 The latest version of `smtp-logger` is packaged in a docker image available at `https://ghcr.io/literalgarage/smtp-logger:latest`.
 
@@ -30,15 +32,13 @@ smtp:
     - "8025:8025"
 ```
 
-## Installation locally
+## Installation and usage locally
 
 Install this library using `pip`:
 
 ```bash
 pip install smtp-logger
 ```
-
-## Usage
 
 This provides an `smtp-logger` binary:
 
