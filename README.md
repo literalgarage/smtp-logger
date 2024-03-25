@@ -56,6 +56,8 @@ If configuration is missing then, by default, `SMTP_LOGGER_HOST` is `localhost` 
 
 This is the simplest SMTP logging implementation that worked for the specific cases I ran into. There are an enormous number of basic and advanced SMTP features this server doesn't yet support. Its handling of `content-transfer-encoding`s is weak at the moment. It doesn't support TLS. etc.
 
+I'd love your help improving this tool!
+
 To contribute to this library, first checkout the code. Then create a new virtual environment:
 
 ```bash
